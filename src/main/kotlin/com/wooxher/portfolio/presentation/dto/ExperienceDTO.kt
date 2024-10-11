@@ -6,7 +6,4 @@ data class ExperienceDTO(
     val startYearMonth:String,
     val endYearMonth:String?,
     val details : List<String>,
-) {
-
-
-}
+)

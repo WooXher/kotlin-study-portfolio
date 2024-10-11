@@ -6,9 +6,9 @@ data class ProjectDetailDTO(
     val content: String,
     val url: String?,
 ) {
-constructor(projentDetail: ProjectDetail): this(
-    content = projentDetail.content,
-    url = projentDetail.url
-)
+    constructor(projectDetail: ProjectDetail): this(
+        content = projectDetail.content,
+        url = projectDetail.url
+    )
 
 }
