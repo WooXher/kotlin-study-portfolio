@@ -23,7 +23,7 @@ class Experience( // ExperienceDetail 과 1 : N 관계
 
     var description: String = description
 
-    var statYear:Int = startYear
+    var startYear:Int = startYear
 
     var startMonth: Int = startMonth
 
@@ -36,7 +36,7 @@ class Experience( // ExperienceDetail 과 1 : N 관계
     // ExperienceDetail과 1:N 관계
     @OneToMany(
         targetEntity = ExperienceDetail::class,
-        fetch = FetchType.LAZY,
+        fetch = FetchType.EAGER,
         cascade = [CascadeType.ALL]) // 1 Experience : N ExperienceDetail
     @JoinColumn(name = "experience_id") // 조인할 컬럼이름
     var details: MutableList<ExperienceDetail> = mutableListOf()
@@ -52,7 +52,7 @@ class Experience( // ExperienceDetail 과 1 : N 관계
     fun update(title: String, description: String, startYear: Int, startMonth: Int, endYear: Int?, endMonth: Int?, isActive: Boolean, ):Unit{
         this.title = title
         this.description = description
-        this.statYear = statYear
+        this.startYear = startYear
         this.startMonth = startMonth
         this.endYear = endYear
         this.endMonth = endMonth

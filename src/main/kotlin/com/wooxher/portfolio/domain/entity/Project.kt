@@ -35,11 +35,14 @@ class Project(
     @OneToMany(
         targetEntity = ProjectDetail::class,
         fetch = FetchType.LAZY,
-        cascade = [CascadeType.ALL]) // 1 Experience : N ExperienceDetail
-    @JoinColumn(name = "experience_id") // 조인할 컬럼이름
+        cascade = [CascadeType.PERSIST]) // 1 Experience : N ExperienceDetail
+    @JoinColumn(name = "project_id") // 조인할 컬럼이름
     var details: MutableList<ProjectDetail> = mutableListOf()
 
-    @OneToMany(mappedBy = "project")
+    @OneToMany(
+        mappedBy = "project",
+        fetch = FetchType.LAZY,
+        cascade = [CascadeType.PERSIST])
     var skills : MutableList<ProjectSkill> = mutableListOf()
 
     fun getEndYearMonth():String {
