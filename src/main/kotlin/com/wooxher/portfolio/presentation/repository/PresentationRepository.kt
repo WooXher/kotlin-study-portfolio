@@ -22,7 +22,7 @@ class PresentationRepository (
         return experienceRepository.findAllByIsActive(true)
     }
 
-    fun getActiveAIntroductions(): List<Introduction>{
+    fun getActiveIntroductions(): List<Introduction>{
         return introductionRepository.findAllByIsActive(true)
     }
 

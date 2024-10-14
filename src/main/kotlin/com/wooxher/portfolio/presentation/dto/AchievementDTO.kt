@@ -7,7 +7,6 @@ data class AchievementDTO(
     val description : String,
     val host : String,
     val achievedDate : String?,
-
 ) {
 
 

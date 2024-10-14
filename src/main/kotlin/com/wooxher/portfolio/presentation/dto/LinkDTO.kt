@@ -11,5 +11,4 @@ data class LinkDTO(
         name = link.name.lowercase(),
         content = link.content,
     )
-
 }

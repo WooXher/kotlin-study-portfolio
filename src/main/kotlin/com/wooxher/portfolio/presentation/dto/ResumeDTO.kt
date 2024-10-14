@@ -15,7 +15,7 @@ class ResumeDTO(
         ExperienceDTO(
             title = it.title,
             description = it.description,
-            startYearMonth = "${it.statYear}.${it.startMonth}",
+            startYearMonth = "${it.startYear}.${it.startMonth}",
             endYearMonth = it.getEndYearMonth(),
             details = it.details.filter { it.isActive }.map { it.content }
         )
@@ -27,8 +27,8 @@ class ResumeDTO(
             description = it.description,
             host = it.host,
             achievedDate = it.achievedDate
-                ?.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME) // yy-mm-dd
-                ?.replace("-", ",")
+                ?.format(DateTimeFormatter.ISO_LOCAL_DATE) // yy-mm-dd
+                ?.replace("-", ".")
         )
     }
 

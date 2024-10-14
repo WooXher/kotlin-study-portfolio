@@ -5,6 +5,7 @@ import com.wooxher.portfolio.domain.entity.ExperienceDetail
 import org.assertj.core.api.Assertions
 import org.assertj.core.api.Assertions.*
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.TestInstance
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
@@ -72,6 +73,7 @@ class ExperienceRepositoryTest(
         println("---- findAll 테스트 종료 ----")
     }
     @Test
+    @DisplayName("활동?")
     fun testFindAllByIsActive(){
         println("---- findAllByIsActive 테스트 시작 ----")
         val experiences = experienceRepository.findAllByIsActive(true)
