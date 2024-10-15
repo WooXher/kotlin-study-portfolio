@@ -84,7 +84,6 @@ class ExperienceRepositoryTest(
             assertThat(experience.details).hasSize(experience.title.toInt())
             println("experiences.details.size: ${experience.details.size}")
         }
-
         println("---- findAllByIsActive 테스트 종료 ----")
     }
 
