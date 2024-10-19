@@ -6,7 +6,8 @@ import jakarta.persistence.*
 // 이 어노테이션은 jpa에서 태이블과 매핑되는 클래스라는걸 인지함
 class ExperienceDetail(
     content: String,
-    isActive: Boolean,) : BaseEntity() {
+    isActive: Boolean,
+    ) : BaseEntity() {
 
     @Id // 해당 필드가 pk라는걸 인지함
     @GeneratedValue(strategy = GenerationType.IDENTITY)
