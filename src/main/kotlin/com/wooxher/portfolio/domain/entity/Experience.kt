@@ -1,55 +1,58 @@
-package com.wooxher.portfolio.domain.entity
+package com.yongback.portfolio.domain.entity
 
-import jakarta.persistence.*
+import jakarta.persistence.CascadeType
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+import jakarta.persistence.FetchType
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.GenerationType
+import jakarta.persistence.Id
+import jakarta.persistence.JoinColumn
+import jakarta.persistence.OneToMany
 
 @Entity
-// 이 어노테이션은 jpa에서 태이블과 매핑되는 클래스라는걸 인지함
-class Experience( // ExperienceDetail 과 1 : N 관계
+class Experience(
     title: String,
     description: String,
     startYear: Int,
     startMonth: Int,
     endYear: Int?,
     endMonth: Int?,
-    isActive: Boolean,
+    isActive: Boolean
 ) : BaseEntity() {
 
-    @Id // 해당 필드가 pk라는걸 인지함
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "experience_id") // db에서 어떤 컬럼이랑 매칭될지 정해줌
+    @Column(name = "experience_id")
     var id: Long? = null
 
-    var title:String = title
+    var title: String = title
 
     var description: String = description
 
-    var startYear:Int = startYear
+    var startYear: Int = startYear
 
     var startMonth: Int = startMonth
 
-    var endYear:Int? = endYear
+    var endYear: Int? = endYear
 
-    var endMonth:Int? = endMonth
+    var endMonth: Int? = endMonth
 
     var isActive: Boolean = isActive
 
-    // ExperienceDetail과 1:N 관계
-    @OneToMany(
-        targetEntity = ExperienceDetail::class,
-        fetch = FetchType.LAZY,
-        cascade = [CascadeType.ALL]) // 1 Experience : N ExperienceDetail
-    @JoinColumn(name = "experience_id") // 조인할 컬럼이름
+    @OneToMany(targetEntity = ExperienceDetail::class, fetch = FetchType.LAZY, cascade = [CascadeType.ALL])
+    @JoinColumn(name = "experience_id")
     var details: MutableList<ExperienceDetail> = mutableListOf()
 
-    fun getEndYearMonth():String {
-        if(endYear == null || endMonth == null){
+    fun getEndYearMonth(): String {
+        if (endYear == null || endMonth == null) {
             return "Present"
         }
 
-        return "${endYear}.${endMonth}" // 2023.12
-
+        return "${endYear}.${endMonth}"
     }
-    fun update(title: String, description: String, startYear: Int, startMonth: Int, endYear: Int?, endMonth: Int?, isActive: Boolean, ):Unit{
+
+    fun update(title: String, description: String, startYear: Int, startMonth: Int, endYear: Int?, endMonth: Int?, isActive: Boolean) {
         this.title = title
         this.description = description
         this.startYear = startYear
@@ -58,21 +61,10 @@ class Experience( // ExperienceDetail 과 1 : N 관계
         this.endMonth = endMonth
         this.isActive = isActive
     }
-    fun addDetails(detail: MutableList<ExperienceDetail>?){
-        if(detail != null){
-            this.details.addAll(detail)
+
+    fun addDetails(details: MutableList<ExperienceDetail>?) {
+        if (details != null) {
+            this.details.addAll(details)
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }

@@ -1,7 +1,7 @@
-package com.wooxher.portfolio.admin.interceptor
+package com.yongback.portfolio.admin.interceptor
 
 data class MenuDTO(
     val name: String,
-    val pages: List<PageDTO>,
-) {
-}
+    val pages: List<PageDTO>
+)
+

@@ -1,10 +1,10 @@
-package com.wooxher.portfolio.presentation.service
+package com.yongback.portfolio.presentation.service
 
-import com.wooxher.portfolio.presentation.dto.IntroductionDTO
-import com.wooxher.portfolio.presentation.dto.LinkDTO
-import com.wooxher.portfolio.presentation.dto.ProjectDTO
-import com.wooxher.portfolio.presentation.dto.ResumeDTO
-import com.wooxher.portfolio.presentation.repository.PresentationRepository
+import com.yongback.portfolio.presentation.dto.IntroductionDTO
+import com.yongback.portfolio.presentation.dto.LinkDTO
+import com.yongback.portfolio.presentation.dto.ProjectDTO
+import com.yongback.portfolio.presentation.dto.ResumeDTO
+import com.yongback.portfolio.presentation.repository.PresentationRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -14,18 +14,22 @@ class PresentationService(
 ) {
 
     @Transactional(readOnly = true)
-    fun getIntroductions(): List<IntroductionDTO>{
+    fun getIntroductions(): List<IntroductionDTO> {
         val introductions = presentationRepository.getActiveIntroductions()
+
         return introductions.map { IntroductionDTO(it) }
     }
+
     @Transactional(readOnly = true)
-    fun getLinks(): List<LinkDTO>{
+    fun getLinks(): List<LinkDTO> {
         val links = presentationRepository.getActiveLinks()
 
         return links.map { LinkDTO(it) }
     }
+
     @Transactional(readOnly = true)
-    fun getResume(): ResumeDTO{
+    fun getResume(): ResumeDTO {
+
         val experiences = presentationRepository.getActiveExperiences()
         val achievements = presentationRepository.getActiveAchievements()
         val skills = presentationRepository.getActiveSkills()
@@ -33,12 +37,15 @@ class PresentationService(
         return ResumeDTO(
             experiences = experiences,
             achievements = achievements,
-            skills = skills,
+            skills = skills
         )
     }
+
     @Transactional(readOnly = true)
-    fun getProjects(): List<ProjectDTO>{
+    fun getProjects(): List<ProjectDTO> {
         val projects = presentationRepository.getActiveProjects()
+
         return projects.map { ProjectDTO(it) }
     }
+
 }

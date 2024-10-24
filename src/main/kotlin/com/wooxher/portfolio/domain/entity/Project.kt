@@ -1,9 +1,16 @@
-package com.wooxher.portfolio.domain.entity
+package com.yongback.portfolio.domain.entity
 
-import jakarta.persistence.*
+import jakarta.persistence.CascadeType
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+import jakarta.persistence.FetchType
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.GenerationType
+import jakarta.persistence.Id
+import jakarta.persistence.JoinColumn
+import jakarta.persistence.OneToMany
 
 @Entity
-// 이 어노테이션은 jpa에서 태이블과 매핑되는 클래스라는걸 인지함
 class Project(
     name: String,
     description: String,
@@ -11,61 +18,56 @@ class Project(
     startMonth: Int,
     endYear: Int?,
     endMonth: Int?,
-    isActive: Boolean,
+    isActive: Boolean
 ) : BaseEntity() {
 
-    @Id // 해당 필드가 pk라는걸 인지함
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "project_id") // db에서 어떤 컬럼이랑 매칭될지 정해줌
+    @Column(name = "project_id")
     var id: Long? = null
 
-    var name:String = name
+    var name: String = name
 
     var description: String = description
 
-    var statYear:Int = startYear
+    var startYear: Int = startYear
 
     var startMonth: Int = startMonth
 
-    var endYear:Int? = endYear
+    var endYear: Int? = endYear
 
-    var endMonth:Int? = endMonth
+    var endMonth: Int? = endMonth
 
     var isActive: Boolean = isActive
-    @OneToMany(
-        targetEntity = ProjectDetail::class,
-        fetch = FetchType.LAZY,
-        cascade = [CascadeType.PERSIST]) // 1 Experience : N ExperienceDetail
-    @JoinColumn(name = "project_id") // 조인할 컬럼이름
+
+    @OneToMany(targetEntity = ProjectDetail::class, fetch = FetchType.LAZY, cascade = [CascadeType.PERSIST])
+    @JoinColumn(name = "project_id")
     var details: MutableList<ProjectDetail> = mutableListOf()
 
-    @OneToMany(
-        mappedBy = "project",
-        fetch = FetchType.LAZY,
-        cascade = [CascadeType.PERSIST])
-    var skills : MutableList<ProjectSkill> = mutableListOf()
+    @OneToMany(mappedBy = "project", fetch = FetchType.LAZY, cascade = [CascadeType.PERSIST])
+    var skills: MutableList<ProjectSkill> = mutableListOf()
 
-    fun getEndYearMonth():String {
-        if(endYear == null || endMonth == null){
+    fun getEndYearMonth(): String {
+        if (endYear == null || endMonth == null) {
             return "Present"
         }
 
-        return "${endYear}.${endMonth}" // 2023.12
-
+        return "${endYear}.${endMonth}"
     }
-    fun update(name: String, description: String, startYear: Int, startMonth: Int, endYear: Int?, endMonth: Int?, isActive: Boolean, ):Unit{
+
+    fun update(name: String, description: String, startYear: Int, startMonth: Int, endYear: Int?, endMonth: Int?, isActive: Boolean) {
         this.name = name
         this.description = description
-        this.statYear = statYear
+        this.startYear = startYear
         this.startMonth = startMonth
         this.endYear = endYear
         this.endMonth = endMonth
         this.isActive = isActive
     }
-    fun addDetails(detail: MutableList<ProjectDetail>?){
-        if(detail != null){
-            this.details.addAll(detail)
+
+    fun addDetails(details: MutableList<ProjectDetail>?) {
+        if (details != null) {
+            this.details.addAll(details)
         }
     }
-
 }

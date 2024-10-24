@@ -1,7 +1,6 @@
-package com.wooxher.portfolio.admin.interceptor
+package com.yongback.portfolio.admin.interceptor
 
 data class PageDTO(
-    val name : String,
-    val url: String,
-) {
-}
+    val name: String,
+    val url: String
+)

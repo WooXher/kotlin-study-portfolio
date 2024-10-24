@@ -1,22 +1,24 @@
-package com.wooxher.portfolio.admin.context.project.form
+package com.yongback.portfolio.admin.context.project.form
 
-import com.wooxher.portfolio.domain.entity.ProjectDetail
+import com.yongback.portfolio.domain.entity.ProjectDetail
 import jakarta.validation.constraints.NotBlank
 
-class ProjectDetailForm(
-    val id : Long,
+data class ProjectDetailForm(
 
-    @NotBlank(message = "필수값 입니다.")
-    val content : String,
+    val id: Long,
+
+    @field:NotBlank(message = "필수값입니다.")
+    val content: String,
+
     val url: String?,
-    val isActive : Boolean
+
+    val isActive: Boolean
 ) {
     fun toEntity(): ProjectDetail {
         return ProjectDetail(
             content = this.content,
             url = this.url,
-            isActive = this.isActive,
+            isActive = this.isActive
         )
     }
-
 }

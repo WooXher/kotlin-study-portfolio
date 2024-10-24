@@ -1,14 +1,13 @@
-package com.wooxher.portfolio.presentation.dto
+package com.yongback.portfolio.presentation.dto
 
-import com.wooxher.portfolio.domain.entity.ProjectDetail
+import com.yongback.portfolio.domain.entity.ProjectDetail
 
 data class ProjectDetailDTO(
     val content: String,
-    val url: String?,
+    val url: String?
 ) {
-    constructor(projectDetail: ProjectDetail): this(
+    constructor(projectDetail: ProjectDetail) : this(
         content = projectDetail.content,
         url = projectDetail.url
     )
-
 }

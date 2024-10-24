@@ -1,17 +1,17 @@
-package com.wooxher.portfolio.presentation.dto
+package com.yongback.portfolio.presentation.dto
 
-import com.wooxher.portfolio.domain.entity.Achievement
-import com.wooxher.portfolio.domain.entity.Experience
-import com.wooxher.portfolio.domain.entity.Skill
+import com.yongback.portfolio.domain.entity.Achievement
+import com.yongback.portfolio.domain.entity.Experience
+import com.yongback.portfolio.domain.entity.Skill
 import java.time.format.DateTimeFormatter
 
 class ResumeDTO(
     experiences: List<Experience>,
     achievements: List<Achievement>,
-    skills: List<Skill>,
+    skills: List<Skill>
 ) {
 
-    var experiences: List<ExperienceDTO> = experiences.map{
+    var experiences: List<ExperienceDTO> = experiences.map {
         ExperienceDTO(
             title = it.title,
             description = it.description,
@@ -21,17 +21,17 @@ class ResumeDTO(
         )
     }
 
-    var achievements: List<AchievementDTO> = achievements.map{
+    var achievements: List<AchievementDTO> = achievements.map {
         AchievementDTO(
             title = it.title,
             description = it.description,
             host = it.host,
             achievedDate = it.achievedDate
-                ?.format(DateTimeFormatter.ISO_LOCAL_DATE) // yy-mm-dd
+                ?.format(DateTimeFormatter.ISO_LOCAL_DATE)
                 ?.replace("-", ".")
         )
     }
 
-    var skills: List<SkillDTO> = skills.map{ SkillDTO(it) }
+    var skills: List<SkillDTO> = skills.map { SkillDTO(it) }
 
 }

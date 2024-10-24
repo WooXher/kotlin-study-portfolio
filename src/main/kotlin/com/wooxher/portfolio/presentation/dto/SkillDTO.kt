@@ -1,15 +1,13 @@
-package com.wooxher.portfolio.presentation.dto
+package com.yongback.portfolio.presentation.dto
 
-import com.wooxher.portfolio.domain.entity.Skill
+import com.yongback.portfolio.domain.entity.Skill
 
 data class SkillDTO(
     val name: String,
-    val type: String,
+    val type: String
 ) {
-
-    constructor(skill: Skill): this(
+    constructor(skill: Skill) : this(
         name = skill.name,
-        type = skill.type.name,
+        type = skill.type.name
     )
-
 }

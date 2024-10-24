@@ -1,13 +1,11 @@
-package com.wooxher.portfolio.presentation.dto
+package com.yongback.portfolio.presentation.dto
 
-import com.wooxher.portfolio.domain.entity.Introduction
+import com.yongback.portfolio.domain.entity.Introduction
 
 data class IntroductionDTO(
-    val content:String,
+    val content: String
 ) {
     constructor(introduction: Introduction) : this(
         content = introduction.content
     )
-
-
 }

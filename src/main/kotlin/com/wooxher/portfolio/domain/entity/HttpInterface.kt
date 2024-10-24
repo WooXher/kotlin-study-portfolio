@@ -1,25 +1,32 @@
-package com.wooxher.portfolio.domain.entity
+package com.yongback.portfolio.domain.entity
 
-import jakarta.persistence.*
-import jakarta.servlet.http.HttpServlet
+import jakarta.persistence.Column
+import jakarta.persistence.Entity
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.GenerationType
+import jakarta.persistence.Id
 import jakarta.servlet.http.HttpServletRequest
 
 @Entity
-// 이 어노테이션은 jpa에서 태이블과 매핑되는 클래스라는걸 인지함
 class HttpInterface(httpServletRequest: HttpServletRequest) : BaseEntity() {
 
-    @Id // 해당 필드가 pk라는걸 인지함
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "http_interface_id") // db에서 어떤 컬럼이랑 매칭될지 정해줌
+    @Column(name = "http_interface_id")
     var id: Long? = null
 
-    var cookies: String? = httpServletRequest.cookies
-        ?.map{ "${it.name}:${it.value}" }
-        ?.toString() // 널이면 실행 안하고 널 아미ㅕㄴ 실행
-    var referer: String? = httpServletRequest.getHeader("referer") // google.com 이 referer임
+    var cookies: String? = httpServletRequest.cookies?.map { "${it.name}:${it.value}" }?.toString()
+
+    var referer: String? = httpServletRequest.getHeader("referer")
+
     var localAddr: String? = httpServletRequest.localAddr
+
     var remoteAddr: String? = httpServletRequest.remoteAddr
+
     var remoteHost: String? = httpServletRequest.remoteHost
-    var requestURI: String? = httpServletRequest.requestURI
-    var userAgent: String? = httpServletRequest.getHeader("user- agent")
+
+    var requestUri: String? = httpServletRequest.requestURI
+
+    var userAgent: String? = httpServletRequest.getHeader("user-agent")
+
 }

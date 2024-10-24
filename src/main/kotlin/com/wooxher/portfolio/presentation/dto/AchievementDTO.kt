@@ -1,13 +1,8 @@
-package com.wooxher.portfolio.presentation.dto
-
-import org.apache.catalina.Host
+package com.yongback.portfolio.presentation.dto
 
 data class AchievementDTO(
-    val title : String,
-    val description : String,
-    val host : String,
-    val achievedDate : String?,
-) {
-
-
-}
+    val title: String,
+    val description: String,
+    val host: String,
+    val achievedDate: String?
+)

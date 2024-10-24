@@ -1,18 +1,19 @@
-package com.wooxher.portfolio.admin.context.link.form
+package com.yongback.portfolio.admin.context.link.form
 
-import com.wooxher.portfolio.domain.entity.Link
+import com.yongback.portfolio.domain.entity.Link
 import jakarta.validation.constraints.NotBlank
 
 data class LinkForm(
-    @field:NotBlank(message = "필수값 입니다.")
-    val name : String,
 
-    @field:NotBlank(message = "필수값 입니다.")
-    val content : String,
+    @field:NotBlank(message = "필수값입니다.")
+    val name: String,
 
-    val isActive : Boolean
+    @field:NotBlank(message = "필수값입니다.")
+    val content: String,
+
+    val isActive: Boolean
+
 ) {
-
     fun toEntity(): Link {
         return Link(
             name = this.name,
@@ -21,10 +22,10 @@ data class LinkForm(
         )
     }
 
-    fun toEntity(id : Long): Link {
+    fun toEntity(id: Long): Link {
         val link = this.toEntity()
         link.id = id
+
         return link
     }
-
 }
