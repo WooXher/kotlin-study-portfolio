@@ -1,10 +1,10 @@
-package com.yongback.portfolio.admin.context.skill.controller
+package com.wooxher.portfolio.admin.context.skill.controller
 
-import com.yongback.portfolio.admin.context.skill.service.AdminSkillService
-import com.yongback.portfolio.admin.data.FormElementDTO
-import com.yongback.portfolio.admin.data.SelectFormElementDTO
-import com.yongback.portfolio.admin.data.TextFormElementDTO
-import com.yongback.portfolio.domain.constant.SkillType
+import com.wooxher.portfolio.admin.context.skill.service.AdminSkillService
+import com.wooxher.portfolio.admin.data.FormElementDTO
+import com.wooxher.portfolio.admin.data.SelectFormElementDTO
+import com.wooxher.portfolio.admin.data.TextFormElementDTO
+import com.wooxher.portfolio.domain.constant.SkillType
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping

@@ -1,7 +1,7 @@
-package com.yongback.portfolio.domain.repository
+package com.wooxher.portfolio.domain.repository
 
-import com.yongback.portfolio.domain.constant.SkillType
-import com.yongback.portfolio.domain.entity.Skill
+import com.wooxher.portfolio.domain.constant.SkillType
+import com.wooxher.portfolio.domain.entity.Skill
 import org.springframework.data.jpa.repository.JpaRepository
 import java.util.*
 

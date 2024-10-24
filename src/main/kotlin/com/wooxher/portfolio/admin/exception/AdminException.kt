@@ -1,4 +1,4 @@
-package com.yongback.portfolio.admin.exception
+package com.wooxher.portfolio.admin.exception
 
 import org.springframework.http.HttpStatus
 

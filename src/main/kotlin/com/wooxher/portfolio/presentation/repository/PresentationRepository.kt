@@ -1,17 +1,17 @@
-package com.yongback.portfolio.presentation.repository
+package com.wooxher.portfolio.presentation.repository
 
-import com.yongback.portfolio.domain.entity.Achievement
-import com.yongback.portfolio.domain.entity.Experience
-import com.yongback.portfolio.domain.entity.Introduction
-import com.yongback.portfolio.domain.entity.Link
-import com.yongback.portfolio.domain.entity.Project
-import com.yongback.portfolio.domain.entity.Skill
-import com.yongback.portfolio.domain.repository.AchievementRepository
-import com.yongback.portfolio.domain.repository.ExperienceRepository
-import com.yongback.portfolio.domain.repository.IntroductionRepository
-import com.yongback.portfolio.domain.repository.LinkRepository
-import com.yongback.portfolio.domain.repository.ProjectRepository
-import com.yongback.portfolio.domain.repository.SkillRepository
+import com.wooxher.portfolio.domain.entity.Achievement
+import com.wooxher.portfolio.domain.entity.Experience
+import com.wooxher.portfolio.domain.entity.Introduction
+import com.wooxher.portfolio.domain.entity.Link
+import com.wooxher.portfolio.domain.entity.Project
+import com.wooxher.portfolio.domain.entity.Skill
+import com.wooxher.portfolio.domain.repository.AchievementRepository
+import com.wooxher.portfolio.domain.repository.ExperienceRepository
+import com.wooxher.portfolio.domain.repository.IntroductionRepository
+import com.wooxher.portfolio.domain.repository.LinkRepository
+import com.wooxher.portfolio.domain.repository.ProjectRepository
+import com.wooxher.portfolio.domain.repository.SkillRepository
 import org.springframework.stereotype.Repository
 
 @Repository

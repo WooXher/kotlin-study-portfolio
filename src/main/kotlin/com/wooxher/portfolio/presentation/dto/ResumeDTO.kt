@@ -1,8 +1,8 @@
-package com.yongback.portfolio.presentation.dto
+package com.wooxher.portfolio.presentation.dto
 
-import com.yongback.portfolio.domain.entity.Achievement
-import com.yongback.portfolio.domain.entity.Experience
-import com.yongback.portfolio.domain.entity.Skill
+import com.wooxher.portfolio.domain.entity.Achievement
+import com.wooxher.portfolio.domain.entity.Experience
+import com.wooxher.portfolio.domain.entity.Skill
 import java.time.format.DateTimeFormatter
 
 class ResumeDTO(

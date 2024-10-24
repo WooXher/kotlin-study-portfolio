@@ -1,4 +1,4 @@
-package com.yongback.portfolio.admin.interceptor
+package com.wooxher.portfolio.admin.interceptor
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry

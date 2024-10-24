@@ -1,6 +1,6 @@
-package com.yongback.portfolio.admin.context.project.form
+package com.wooxher.portfolio.admin.context.project.form
 
-import com.yongback.portfolio.domain.entity.ProjectDetail
+import com.wooxher.portfolio.domain.entity.ProjectDetail
 import jakarta.validation.constraints.NotBlank
 
 data class ProjectDetailForm(

@@ -1,6 +1,6 @@
-package com.yongback.portfolio.admin.context.achievement.form
+package com.wooxher.portfolio.admin.context.achievement.form
 
-import com.yongback.portfolio.domain.entity.Achievement
+import com.wooxher.portfolio.domain.entity.Achievement
 import jakarta.validation.constraints.NotBlank
 import java.time.LocalDate
 
@@ -21,7 +21,7 @@ data class AchievementForm(
     val isActive: Boolean
 
 ) {
-    fun toEntity(): Achievement {
+    fun toEntity(): Achievement{
         return Achievement(
             title = this.title,
             description = this.description,

@@ -1,4 +1,4 @@
-package com.yongback.portfolio.admin.security
+package com.wooxher.portfolio.admin.security
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

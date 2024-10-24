@@ -1,8 +1,8 @@
-package com.yongback.portfolio.admin.context.link.controller
+package com.wooxher.portfolio.admin.context.link.controller
 
-import com.yongback.portfolio.admin.context.link.form.LinkForm
-import com.yongback.portfolio.admin.context.link.service.AdminLinkService
-import com.yongback.portfolio.admin.data.ApiResponse
+import com.wooxher.portfolio.admin.context.link.form.LinkForm
+import com.wooxher.portfolio.admin.context.link.service.AdminLinkService
+import com.wooxher.portfolio.admin.data.ApiResponse
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.PathVariable

@@ -1,6 +1,6 @@
-package com.yongback.portfolio.admin.context.link.form
+package com.wooxher.portfolio.admin.context.link.form
 
-import com.yongback.portfolio.domain.entity.Link
+import com.wooxher.portfolio.domain.entity.Link
 import jakarta.validation.constraints.NotBlank
 
 data class LinkForm(

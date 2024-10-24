@@ -1,4 +1,4 @@
-package com.yongback.portfolio
+package com.wooxher.portfolio
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

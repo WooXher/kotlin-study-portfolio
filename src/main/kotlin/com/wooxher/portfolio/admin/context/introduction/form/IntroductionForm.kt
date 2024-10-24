@@ -1,6 +1,6 @@
-package com.yongback.portfolio.admin.context.introduction.form
+package com.wooxher.portfolio.admin.context.introduction.form
 
-import com.yongback.portfolio.domain.entity.Introduction
+import com.wooxher.portfolio.domain.entity.Introduction
 import jakarta.validation.constraints.NotBlank
 
 data class IntroductionForm(

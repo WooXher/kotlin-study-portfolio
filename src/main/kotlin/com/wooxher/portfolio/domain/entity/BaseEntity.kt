@@ -1,4 +1,4 @@
-package com.yongback.portfolio.domain.entity
+package com.wooxher.portfolio.domain.entity
 
 import jakarta.persistence.Column
 import jakarta.persistence.MappedSuperclass

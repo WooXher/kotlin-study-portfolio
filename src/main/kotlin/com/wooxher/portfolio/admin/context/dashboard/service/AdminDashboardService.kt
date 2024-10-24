@@ -1,8 +1,8 @@
-package com.yongback.portfolio.admin.context.dashboard.service
+package com.wooxher.portfolio.admin.context.dashboard.service
 
-import com.yongback.portfolio.admin.data.TableDTO
-import com.yongback.portfolio.domain.entity.HttpInterface
-import com.yongback.portfolio.domain.repository.HttpInterfaceRepository
+import com.wooxher.portfolio.admin.data.TableDTO
+import com.wooxher.portfolio.domain.entity.HttpInterface
+import com.wooxher.portfolio.domain.repository.HttpInterfaceRepository
 import org.springframework.data.domain.PageRequest
 import org.springframework.data.domain.Sort
 import org.springframework.stereotype.Service

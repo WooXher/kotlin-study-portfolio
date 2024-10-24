@@ -1,6 +1,6 @@
-package com.yongback.portfolio.admin.context.skill.form
+package com.wooxher.portfolio.admin.context.skill.form
 
-import com.yongback.portfolio.domain.entity.Skill
+import com.wooxher.portfolio.domain.entity.Skill
 import jakarta.validation.constraints.NotBlank
 
 data class SkillForm(

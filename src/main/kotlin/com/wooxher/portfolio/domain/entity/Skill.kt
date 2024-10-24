@@ -1,6 +1,6 @@
-package com.yongback.portfolio.domain.entity
+package com.wooxher.portfolio.domain.entity
 
-import com.yongback.portfolio.domain.constant.SkillType
+import com.wooxher.portfolio.domain.constant.SkillType
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.EnumType

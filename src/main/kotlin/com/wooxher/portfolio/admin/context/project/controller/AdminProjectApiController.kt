@@ -1,9 +1,9 @@
-package com.yongback.portfolio.admin.context.project.controller
+package com.wooxher.portfolio.admin.context.project.controller
 
-import com.yongback.portfolio.admin.context.project.form.ProjectForm
-import com.yongback.portfolio.admin.context.project.service.AdminProjectService
-import com.yongback.portfolio.admin.data.ApiResponse
-import com.yongback.portfolio.admin.data.TableDTO
+import com.wooxher.portfolio.admin.context.project.form.ProjectForm
+import com.wooxher.portfolio.admin.context.project.service.AdminProjectService
+import com.wooxher.portfolio.admin.data.ApiResponse
+import com.wooxher.portfolio.admin.data.TableDTO
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.GetMapping

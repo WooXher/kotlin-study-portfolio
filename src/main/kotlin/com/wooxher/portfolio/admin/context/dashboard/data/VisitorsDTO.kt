@@ -1,4 +1,4 @@
-package com.yongback.portfolio.admin.context.dashboard.data
+package com.wooxher.portfolio.admin.context.dashboard.data
 
 data class VisitorsDTO(
     val name: String,

@@ -1,6 +1,6 @@
-package com.yongback.portfolio.admin.context.experience.form
+package com.wooxher.portfolio.admin.context.experience.form
 
-import com.yongback.portfolio.domain.entity.ExperienceDetail
+import com.wooxher.portfolio.domain.entity.ExperienceDetail
 import jakarta.validation.constraints.NotBlank
 
 data class ExperienceDetailForm(

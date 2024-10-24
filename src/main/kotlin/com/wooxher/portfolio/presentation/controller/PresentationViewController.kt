@@ -1,7 +1,7 @@
-package com.yongback.portfolio.presentation.controller
+package com.wooxher.portfolio.presentation.controller
 
-import com.yongback.portfolio.domain.constant.SkillType
-import com.yongback.portfolio.presentation.service.PresentationService
+import com.wooxher.portfolio.domain.constant.SkillType
+import com.wooxher.portfolio.presentation.service.PresentationService
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.GetMapping

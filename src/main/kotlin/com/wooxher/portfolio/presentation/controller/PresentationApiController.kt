@@ -1,10 +1,10 @@
-package com.yongback.portfolio.presentation.controller
+package com.wooxher.portfolio.presentation.controller
 
-import com.yongback.portfolio.presentation.dto.IntroductionDTO
-import com.yongback.portfolio.presentation.dto.LinkDTO
-import com.yongback.portfolio.presentation.dto.ProjectDTO
-import com.yongback.portfolio.presentation.dto.ResumeDTO
-import com.yongback.portfolio.presentation.service.PresentationService
+import com.wooxher.portfolio.presentation.dto.IntroductionDTO
+import com.wooxher.portfolio.presentation.dto.LinkDTO
+import com.wooxher.portfolio.presentation.dto.ProjectDTO
+import com.wooxher.portfolio.presentation.dto.ResumeDTO
+import com.wooxher.portfolio.presentation.service.PresentationService
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController

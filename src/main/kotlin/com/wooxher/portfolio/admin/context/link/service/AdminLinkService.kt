@@ -1,9 +1,9 @@
-package com.yongback.portfolio.admin.context.link.service
+package com.wooxher.portfolio.admin.context.link.service
 
-import com.yongback.portfolio.admin.context.link.form.LinkForm
-import com.yongback.portfolio.admin.data.TableDTO
-import com.yongback.portfolio.domain.entity.Link
-import com.yongback.portfolio.domain.repository.LinkRepository
+import com.wooxher.portfolio.admin.context.link.form.LinkForm
+import com.wooxher.portfolio.admin.data.TableDTO
+import com.wooxher.portfolio.domain.entity.Link
+import com.wooxher.portfolio.domain.repository.LinkRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 

@@ -1,4 +1,4 @@
-package com.yongback.portfolio.admin.interceptor
+package com.wooxher.portfolio.admin.interceptor
 
 import jakarta.servlet.http.HttpServletRequest
 import jakarta.servlet.http.HttpServletResponse

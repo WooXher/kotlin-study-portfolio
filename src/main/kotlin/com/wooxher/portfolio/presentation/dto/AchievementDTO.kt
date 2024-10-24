@@ -1,4 +1,4 @@
-package com.yongback.portfolio.presentation.dto
+package com.wooxher.portfolio.presentation.dto
 
 data class AchievementDTO(
     val title: String,

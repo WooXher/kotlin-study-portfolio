@@ -1,4 +1,4 @@
-package com.yongback.portfolio.domain.constant
+package com.wooxher.portfolio.domain.constant
 
 enum class SkillType {
     LANGUAGE, FRAMEWORK, DATABASE, TOOL

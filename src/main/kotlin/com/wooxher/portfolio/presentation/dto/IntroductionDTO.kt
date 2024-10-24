@@ -1,6 +1,6 @@
-package com.yongback.portfolio.presentation.dto
+package com.wooxher.portfolio.presentation.dto
 
-import com.yongback.portfolio.domain.entity.Introduction
+import com.wooxher.portfolio.domain.entity.Introduction
 
 data class IntroductionDTO(
     val content: String

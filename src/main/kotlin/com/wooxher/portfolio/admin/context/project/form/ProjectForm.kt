@@ -1,6 +1,6 @@
-package com.yongback.portfolio.admin.context.project.form
+package com.wooxher.portfolio.admin.context.project.form
 
-import com.yongback.portfolio.domain.entity.Project
+import com.wooxher.portfolio.domain.entity.Project
 import jakarta.validation.constraints.Max
 import jakarta.validation.constraints.Min
 import jakarta.validation.constraints.NotBlank

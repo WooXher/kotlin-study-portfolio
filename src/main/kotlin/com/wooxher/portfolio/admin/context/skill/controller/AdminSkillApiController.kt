@@ -1,8 +1,8 @@
-package com.yongback.portfolio.admin.context.skill.controller
+package com.wooxher.portfolio.admin.context.skill.controller
 
-import com.yongback.portfolio.admin.context.skill.form.SkillForm
-import com.yongback.portfolio.admin.context.skill.service.AdminSkillService
-import com.yongback.portfolio.admin.data.ApiResponse
+import com.wooxher.portfolio.admin.context.skill.form.SkillForm
+import com.wooxher.portfolio.admin.context.skill.service.AdminSkillService
+import com.wooxher.portfolio.admin.data.ApiResponse
 import org.springframework.http.ResponseEntity
 import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.PathVariable

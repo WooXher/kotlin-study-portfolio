@@ -1,6 +1,6 @@
-package com.yongback.portfolio.admin.advice
+package com.wooxher.portfolio.admin.advice
 
-import com.yongback.portfolio.admin.exception.AdminException
+import com.wooxher.portfolio.admin.exception.AdminException
 import org.slf4j.LoggerFactory
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.MethodArgumentNotValidException

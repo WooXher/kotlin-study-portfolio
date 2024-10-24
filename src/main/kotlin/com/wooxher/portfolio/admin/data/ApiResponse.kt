@@ -1,4 +1,4 @@
-package com.yongback.portfolio.admin.data
+package com.wooxher.portfolio.admin.data
 
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
