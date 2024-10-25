@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    ports:
+      - "3307:3306"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=wjddncjf"
+      - "TZ=Asia/Seoul"
+      - "LC_ALL=C.UTF-8"
+    command:
+      - --character-set-server=utf8mb4
+    volumes:
+      - /var/lib/docker/volumes/mysql/_data:/var/lib/mysql
