@@ -35,7 +35,7 @@ class PortfolioApplicationTests {
 		encryptor.setConfig(config)
 		val encryptedText: String = encryptor.encrypt(plainText)
 		val decryptedText: String = encryptor.decrypt(encryptedText)
-		println(encryptedText)e
+		println(encryptedText)
 		println(decryptedText)
 	}
 }
