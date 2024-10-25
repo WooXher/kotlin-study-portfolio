@@ -38,3 +38,9 @@ out/
 
 ### Kotlin ###
 .kotlin
+
+docker-compose.yml
+docker-compose.properties
+application.properties
+application-default.properties
+application-docker .properties
